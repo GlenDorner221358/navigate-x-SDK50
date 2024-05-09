@@ -1,10 +1,22 @@
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text, Button } from 'react-native'
 import React from 'react'
 
-function PrivateScreen() {
+function PrivateScreen( {navigation} ) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Private</Text>
+      <Button
+        title="Home"
+        onPress={() => navigation.navigate('home')}
+      />
+      <Button
+        title="Development"
+        onPress={() => navigation.navigate('development')}
+      />
+      <Button
+        title="Photos"
+        onPress={() => navigation.navigate('photos')}
+      />
     </View>
   )
 }

@@ -1,10 +1,22 @@
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text, Button } from 'react-native'
 import React from 'react'
 
-function PhotosScreen() {
+function PhotosScreen( {navigation} ) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Photos</Text>
+      <Button
+        title="Home"
+        onPress={() => navigation.navigate('home')}
+      />
+      <Button
+        title="Development"
+        onPress={() => navigation.navigate('development')}
+      />
+      <Button
+        title="Private"
+        onPress={() => navigation.navigate('private')}
+      />
     </View>
   )
 }

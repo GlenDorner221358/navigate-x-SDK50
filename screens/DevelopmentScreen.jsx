@@ -1,10 +1,22 @@
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text, Button } from 'react-native'
 import React from 'react'
 
-function DevelopmentScreen() {
+function DevelopmentScreen( {navigation} ) {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Development</Text>
+      <Button
+        title="Home"
+        onPress={() => navigation.navigate('home')}
+      />
+      <Button
+        title="Photos"
+        onPress={() => navigation.navigate('photos')}
+      />
+      <Button
+        title="Private"
+        onPress={() => navigation.navigate('private')}
+      />
     </View>
   )
 }
